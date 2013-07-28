@@ -5,7 +5,7 @@ $list = array();
 $images = array();
 while($file = readdir($dir)){
 	if ($file != '.' and $file != '..'){
-		$ctime = filectime($data_path . $file) . ',' . $file;
+		$ctime = filectime($file) . ',' . $file;
 		$list[$ctime] = $file;
 	}
 }
