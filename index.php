@@ -9,6 +9,9 @@ while($file = readdir($dir)){
 		$list[$ctime] = $file;
 	}
 }
+
+$list = array_reverse($list);
+
 foreach($list as $im){
 	$images[] = $im;
 }
