@@ -59,18 +59,18 @@ window.onresize = function(event){
 	var windowRatio = window.innerWidth/window.innerHeight;
 	var imageRatio = im.offsetWidth/im.offsetHeight;
 	console.log(windowRatio,imageRatio);
+	im.style.width = "";
+	im.style.height = "";
+	im.style.marginLeft = "";
+	im.style.marginRight = "";
 	if(windowRatio<imageRatio){
 		var margintop = (window.innerHeight - im.offsetHeight)/2;
 		im.style.width = "100%";
-		im.style.height = "";
-		im.style.marginLeft = "";
 		im.style.marginTop = margintop+"px";
 	}
 	else{
 		var marginleft = (window.innerWidth - im.offsetWidth)/2;
 		im.style.width = "";
-		im.style.height = "100%";
-		im.style.marginLeft = marginleft+"px";
 		im.style.marginRight = "";
 	}
 };
