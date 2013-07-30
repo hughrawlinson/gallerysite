@@ -65,13 +65,13 @@ window.onresize = function(event){
 	im.style.marginRight = "";
 	if(windowRatio<imageRatio){
 		im.style.width = "100%";
-		im.style.marginTop = margintop+"px";
 		var margintop = (window.innerHeight - im.offsetHeight)/2;
+		im.style.marginTop = margintop+"px";
 	}
 	else{
 		im.style.height = "100%";
-		im.style.marginLeft = marginleft+"px";
 		var marginleft = (window.innerWidth - im.offsetWidth)/2;
+		im.style.marginLeft = marginleft+"px";
 	}
 };
 var counter = 0;
