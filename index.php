@@ -57,6 +57,9 @@ for($n = 1; $n < count($images); $n++){
 </body>
 <script>
 window.onresize = function(event){
+	var windowRatio = window.innerWidth/window.innerHeight;
+	var imageRatio = im.offsetWidth/window.offsetheight;
+	console.log(windowRatio,imageRatio);
 	var margintop = (window.innerHeight - im.offsetHeight)/2;
 	im.style.marginTop = margintop+"px";
 };
