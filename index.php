@@ -35,9 +35,6 @@ for($n = 1; $n < count($images); $n++){
 		min-height:100%;
 		background-color:#333333;
 	}
-	#image{
-		width:100%;
-	}
 	#countdisplay{
 		position: absolute;
 		top: 5px;
@@ -62,8 +59,16 @@ window.onresize = function(event){
 	var windowRatio = window.innerWidth/window.innerHeight;
 	var imageRatio = im.offsetWidth/im.offsetHeight;
 	console.log(windowRatio,imageRatio);
-	var margintop = (window.innerHeight - im.offsetHeight)/2;
-	im.style.marginTop = margintop+"px";
+	if(windowRatio<imageRatio){
+		var margintop = (window.innerHeight - im.offsetHeight)/2;
+		im.style.width = "100%";
+		im.style.marginTop = margintop+"px";
+	}
+	else{
+		var marginleft = (window.innerWidth - im.offsetWidth)/2;
+		im.style.height = "100%";
+		im.style.marginLeft = marginleft+"px";
+	}
 };
 var counter = 0;
 var images = [<?php echo $imgarrstring;?>];
