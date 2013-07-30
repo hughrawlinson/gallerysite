@@ -29,11 +29,13 @@ for($n = 1; $n < count($images); $n++){
 		html{
 		min-height:100%;
 	}
-
 	body{
 		margin:0px;
 		min-height:100%;
 		background-color:#333333;
+		opacity:0;
+		transition: width 0.5s;
+		-webkit-transition: width 0.5s; /* Safari */
 	}
 	#countdisplay{
 		position: absolute;
@@ -83,6 +85,10 @@ im.onclick = function(){
 	p.innerHTML = (counter+1)+" / "+ images.length;
 	window.onresize();
 }
+im.onload = function(){
+	document.body.opacity = 1;
+	window.onresize();
+};
 window.onresize();
 </script>
 </html>
