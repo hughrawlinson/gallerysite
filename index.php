@@ -54,6 +54,7 @@ for($n = 1; $n < count($images); $n++){
 <body>
 <img id="image" alt="A place I\'ve taken my laptop" src="images/<?php echo $images[0];?>"></img>
 <p id="countdisplay"></p>
+</body>
 <script>
 window.onresize = function(event){
 	var margintop = (window.innerHeight - im.offsetHeight)/2;
@@ -72,5 +73,4 @@ im.onclick = function(){
 }
 window.onresize();
 </script>
-</body>
 </html>
