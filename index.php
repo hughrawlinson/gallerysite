@@ -62,12 +62,16 @@ window.onresize = function(event){
 	if(windowRatio<imageRatio){
 		var margintop = (window.innerHeight - im.offsetHeight)/2;
 		im.style.width = "100%";
+		im.style.height = "";
+		im.style.marginLeft = "";
 		im.style.marginTop = margintop+"px";
 	}
 	else{
 		var marginleft = (window.innerWidth - im.offsetWidth)/2;
+		im.style.width = "";
 		im.style.height = "100%";
 		im.style.marginLeft = marginleft+"px";
+		im.style.marginRight = "";
 	}
 };
 var counter = 0;
