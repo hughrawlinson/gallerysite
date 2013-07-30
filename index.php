@@ -34,8 +34,8 @@ for($n = 1; $n < count($images); $n++){
 		min-height:100%;
 		background-color:#333333;
 		opacity:0;
-		transition: width 0.5s;
-		-webkit-transition: width 0.5s; /* Safari */
+		transition: opacity 0.5s;
+		-webkit-transition: opacity 0.5s; /* Safari */
 	}
 	#countdisplay{
 		position: absolute;
