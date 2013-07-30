@@ -96,7 +96,7 @@ document.onload = function(){
 }
 function preloadImage(url){
     var img = new Image();
-    img.src = url;
+    img.src = "images/"+url;
 }
 window.onresize();
 </script>
