@@ -64,7 +64,7 @@ window.onresize = function(event){
 	im.style.width = "";
 	im.style.height = "";
 	im.style.marginLeft = "";
-	im.style.marginRight = "";
+	im.style.marginTop = "";
 	if(windowRatio<imageRatio){
 		im.style.width = "100%";
 		var margintop = (window.innerHeight - im.offsetHeight)/2;
