@@ -33,9 +33,9 @@ for($n = 1; $n < count($images); $n++){
 	body{
 		margin:0px;
 		min-height:100%;
+		background-color:#333333;
 	}
 	#image{
-		height:100%;
 		width:100%;
 	}
 	#countdisplay{
@@ -55,6 +55,10 @@ for($n = 1; $n < count($images); $n++){
 <img id="image" alt="A place I\'ve taken my laptop" src="images/<?php echo $images[0];?>"></img>
 <p id="countdisplay"></p>
 <script>
+window.onresize = function(event){
+	var margintop = (window.innerHeight - im.offsetHeight)/2;
+	im.style.marginTop = margintop+"px";
+};
 var counter = 0;
 var images = [<?php echo $imgarrstring;?>];
 var im = document.getElementById("image");
@@ -64,7 +68,9 @@ im.onclick = function(){
 	counter = (counter+1)%images.length;
 	this.src = "images/"+images[counter];
 	p.innerHTML = (counter+1)+" / "+ images.length;
+	window.onresize();
 }
+window.onresize();
 </script>
 </body>
 </html>
