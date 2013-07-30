@@ -60,7 +60,7 @@ var im = document.getElementById("image");
 var p = document.getElementById("countdisplay");
 window.onresize = function(event){
 	var windowRatio = window.innerWidth/window.innerHeight;
-	var imageRatio = im.offsetWidth/window.offsetheight;
+	var imageRatio = im.offsetWidth/im.offsetheight;
 	console.log(windowRatio,imageRatio);
 	var margintop = (window.innerHeight - im.offsetHeight)/2;
 	im.style.marginTop = margintop+"px";
