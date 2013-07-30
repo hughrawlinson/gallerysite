@@ -86,9 +86,18 @@ im.onclick = function(){
 	window.onresize();
 }
 im.onload = function(){
-	document.body.opacity = 1;
+	document.body.style.opacity = 1;
 	window.onresize();
 };
+document.onload = function(){
+	for(var a = 0; a < images.length; a++){
+		preloadImage(images[a]);
+	}
+}
+function preloadImage(url){
+    var img = new Image();
+    img.src = url;
+}
 window.onresize();
 </script>
 </html>
