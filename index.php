@@ -56,6 +56,8 @@ for($n = 1; $n < count($images); $n++){
 <p id="countdisplay"></p>
 </body>
 <script>
+var im = document.getElementById("image");
+var p = document.getElementById("countdisplay");
 window.onresize = function(event){
 	var windowRatio = window.innerWidth/window.innerHeight;
 	var imageRatio = im.offsetWidth/window.offsetheight;
@@ -65,8 +67,6 @@ window.onresize = function(event){
 };
 var counter = 0;
 var images = [<?php echo $imgarrstring;?>];
-var im = document.getElementById("image");
-var p = document.getElementById("countdisplay");
 p.innerHTML = (counter+1)+" / "+ images.length;
 im.onclick = function(){
 	counter = (counter+1)%images.length;
