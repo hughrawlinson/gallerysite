@@ -70,8 +70,8 @@ window.onresize = function(event){
 	}
 	else{
 		var marginleft = (window.innerWidth - im.offsetWidth)/2;
-		im.style.width = "";
-		im.style.marginRight = "";
+		im.style.height = "100%";
+		im.style.marginLeft = marginleft+"px";
 	}
 };
 var counter = 0;
