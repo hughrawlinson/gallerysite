@@ -64,14 +64,14 @@ window.onresize = function(event){
 	im.style.marginLeft = "";
 	im.style.marginRight = "";
 	if(windowRatio<imageRatio){
-		var margintop = (window.innerHeight - im.offsetHeight)/2;
 		im.style.width = "100%";
 		im.style.marginTop = margintop+"px";
+		var margintop = (window.innerHeight - im.offsetHeight)/2;
 	}
 	else{
-		var marginleft = (window.innerWidth - im.offsetWidth)/2;
 		im.style.height = "100%";
 		im.style.marginLeft = marginleft+"px";
+		var marginleft = (window.innerWidth - im.offsetWidth)/2;
 	}
 };
 var counter = 0;
