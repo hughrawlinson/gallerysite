@@ -5,6 +5,7 @@ $list = array();
 $images = array();
 while($file = readdir($dir)){
 	if ($file != '.' and $file != '..'){
+		// TODO: Fix chronological order
 		$ctime = filectime($file) . ',' . $file;
 		$list[$ctime] = $file;
 	}
